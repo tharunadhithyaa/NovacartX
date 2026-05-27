@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Browse all products on NovaCartX — filter by category, sort by price, and find your perfect futuristic item.">
+  <title>All Products — NovaCartX</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div id="loader">
+  <div class="loader-logo">Nova<span>Cart</span>X</div>
+  <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+</div>
+<div id="toast-container"></div>
+
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Nova<span>Cart</span>X</a>
+    <div class="nav-search">
+      <span class="nav-search-icon">🔍</span>
+      <input type="text" id="nav-search" placeholder="Search products, brands…">
+    </div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="products.html" class="active">Products</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="nav-actions">
+      <button class="nav-btn" id="theme-toggle" title="Toggle theme">🌙</button>
+      <a href="login.html" class="nav-btn" title="Account">👤</a>
+      <a href="cart.html" class="nav-btn" title="Cart" style="position:relative;">
+        🛒 <span class="nav-badge cart-badge">0</span>
+      </a>
+      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobile-menu">
+  <a href="index.html">🏠 Home</a>
+  <a href="products.html">🛍 Products</a>
+  <a href="cart.html">🛒 Cart</a>
+  <a href="login.html">👤 Account</a>
+  <a href="about.html">ℹ️ About</a>
+  <a href="contact.html">📬 Contact</a>
+</div>
+<div class="modal-overlay" id="quick-view-modal">
+  <div class="modal"><button class="modal-close" data-modal="quick-view-modal">✕</button><div class="modal-content"></div></div>
+</div>
+<button id="back-to-top">↑</button>
+
+<!-- Page Hero -->
+<div class="page-hero">
+  <div class="container">
+    <div class="page-breadcrumb"><a href="index.html">Home</a> › Products</div>
+    <h1 class="page-hero-title">All Products</h1>
+  </div>
+</div>
+
+<!-- Products Page -->
+<main class="products-page">
+  <div class="container">
+    <div class="products-layout">
+
+      <!-- ── Sidebar ── -->
+      <aside class="sidebar">
+        <div style="display:flex;align-items:center;justify-content:space-between;">
+          <div class="sidebar-title">Filters</div>
+          <button id="sidebar-toggle" class="btn btn-sm btn-ghost sidebar-mobile-toggle" style="display:none;">⚙ Filters</button>
+        </div>
+        <div id="sidebar-content">
+
+          <!-- Search -->
+          <div class="sidebar-section">
+            <h4>Search</h4>
+            <div style="position:relative;">
+              <span style="position:absolute;left:0.8rem;top:50%;transform:translateY(-50%);color:var(--text-muted);">🔍</span>
+              <input type="text" id="search-input" class="form-control" placeholder="Search…" style="padding-left:2.4rem;height:38px;">
+            </div>
+          </div>
+
+          <!-- Categories -->
+          <div class="sidebar-section">
+            <h4>Category</h4>
+            <div style="display:flex;flex-direction:column;gap:0.4rem;">
+              <button class="filter-btn active" data-cat="all">All Products <span class="filter-count">12</span></button>
+              <button class="filter-btn" data-cat="electronics">⚡ Electronics <span class="filter-count">6</span></button>
+              <button class="filter-btn" data-cat="fashion">👗 Fashion <span class="filter-count">2</span></button>
+              <button class="filter-btn" data-cat="home">🏠 Home & Living <span class="filter-count">2</span></button>
+              <button class="filter-btn" data-cat="beauty">✨ Beauty <span class="filter-count">2</span></button>
+            </div>
+          </div>
+
+          <!-- Price Range -->
+          <div class="sidebar-section">
+            <h4>Max Price: <span id="price-label">$2000</span></h4>
+            <div class="price-range">
+              <input type="range" id="price-range" min="50" max="2000" value="2000" step="10">
+              <div class="price-range-labels"><span>$50</span><span>$2000</span></div>
+            </div>
+          </div>
+
+          <!-- Rating filter (UI only) -->
+          <div class="sidebar-section">
+            <h4>Rating</h4>
+            <div style="display:flex;flex-direction:column;gap:0.4rem;">
+              <label style="display:flex;align-items:center;gap:0.5rem;font-size:0.88rem;cursor:pointer;">
+                <input type="checkbox" checked style="accent-color:var(--accent);">
+                <span style="color:#f59e0b;">★★★★★</span> &amp; up
+              </label>
+              <label style="display:flex;align-items:center;gap:0.5rem;font-size:0.88rem;cursor:pointer;">
+                <input type="checkbox" checked style="accent-color:var(--accent);">
+                <span style="color:#f59e0b;">★★★★</span>☆ &amp; up
+              </label>
+              <label style="display:flex;align-items:center;gap:0.5rem;font-size:0.88rem;cursor:pointer;">
+                <input type="checkbox" style="accent-color:var(--accent);">
+                <span style="color:#f59e0b;">★★★</span>☆☆ &amp; up
+              </label>
+            </div>
+          </div>
+
+          <!-- In Stock -->
+          <div class="sidebar-section">
+            <h4>Availability</h4>
+            <label style="display:flex;align-items:center;gap:0.5rem;font-size:0.88rem;cursor:pointer;">
+              <input type="checkbox" checked style="accent-color:var(--accent);">
+              In Stock Only
+            </label>
+          </div>
+
+        </div><!-- /sidebar-content -->
+      </aside><!-- /sidebar -->
+
+      <!-- ── Main Content ── -->
+      <div>
+        <!-- Toolbar -->
+        <div class="products-toolbar">
+          <div class="products-count">Showing <strong>12</strong> products</div>
+          <div style="display:flex;align-items:center;gap:0.75rem;">
+            <label style="font-size:0.82rem;color:var(--text-muted);">Sort by:</label>
+            <select class="sort-select" id="sort-select">
+              <option value="featured">Featured</option>
+              <option value="price-asc">Price: Low to High</option>
+              <option value="price-desc">Price: High to Low</option>
+              <option value="rating">Top Rated</option>
+              <option value="newest">Newest First</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Grid -->
+        <div class="products-grid" id="products-grid"></div>
+
+        <!-- Empty state -->
+        <div id="products-empty" class="hidden" style="text-align:center;padding:4rem 2rem;background:var(--surface);border:1.5px solid var(--border);border-radius:var(--radius-lg);">
+          <div style="font-size:3rem;margin-bottom:1rem;">🔍</div>
+          <h3 style="font-family:var(--font-head);font-size:1.4rem;margin-bottom:0.5rem;">No Products Found</h3>
+          <p style="color:var(--text-muted);">Try adjusting your filters or search term.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- Newsletter & Footer -->
+<section class="newsletter-section">
+  <div class="container">
+    <div class="newsletter-card scroll-reveal">
+      <div class="newsletter-icon">📡</div>
+      <h3 class="newsletter-title">Never Miss a Deal</h3>
+      <p class="newsletter-sub">Get the latest products and exclusive offers straight to your inbox.</p>
+      <form class="newsletter-form">
+        <input class="newsletter-input" type="email" placeholder="Your email address…" required>
+        <button class="btn btn-primary" type="submit">Subscribe</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">Nova<span>Cart</span>X</div>
+        <p class="footer-desc">The future of online shopping. Curated futuristic products delivered to your door.</p>
+        <div class="footer-social">
+          <a href="#" class="social-btn">𝕏</a>
+          <a href="#" class="social-btn">📸</a>
+          <a href="#" class="social-btn">𝑓</a>
+          <a href="#" class="social-btn">▶</a>
+        </div>
+      </div>
+      <div class="footer-col"><h4>Shop</h4><ul>
+        <li><a href="products.html">All Products</a></li>
+        <li><a href="products.html?cat=electronics">Electronics</a></li>
+        <li><a href="products.html?cat=fashion">Fashion</a></li>
+        <li><a href="products.html?cat=beauty">Beauty</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Account</h4><ul>
+        <li><a href="login.html">Login / Register</a></li>
+        <li><a href="cart.html">My Cart</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Help</h4><ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 NovaCartX. All rights reserved.</span>
+      <span>Made with ⚡ for the future</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/app.js"></script>
+</body>
+</html>

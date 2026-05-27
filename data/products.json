@@ -1,0 +1,235 @@
+[
+  {
+    "id": 1,
+    "name": "QuantumPulse X1 Headphones",
+    "category": "electronics",
+    "price": 299.99,
+    "originalPrice": 399.99,
+    "discount": 25,
+    "rating": 4.8,
+    "reviews": 1243,
+    "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&q=80",
+      "https://images.unsplash.com/photo-1484704849700-f032a568e944?w=400&q=80",
+      "https://images.unsplash.com/photo-1524678606370-a47ad25cb82a?w=400&q=80"
+    ],
+    "description": "Experience audio like never before with QuantumPulse X1 — featuring active noise cancellation, 40-hour battery life, and holographic spatial sound. Designed for the future.",
+    "specs": ["40hr Battery", "ANC Pro", "Spatial Audio", "USB-C", "Foldable"],
+    "badge": "Best Seller",
+    "inStock": true,
+    "featured": true
+  },
+  {
+    "id": 2,
+    "name": "NovaSkin SmartWatch Ultra",
+    "category": "electronics",
+    "price": 549.00,
+    "originalPrice": 699.00,
+    "discount": 21,
+    "rating": 4.9,
+    "reviews": 876,
+    "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1523275335684-37898baf30?w=400&q=80",
+      "https://images.unsplash.com/photo-1434494878577-86c23bcb06b9?w=400&q=80"
+    ],
+    "description": "The NovaSkin SmartWatch Ultra blends futuristic design with cutting-edge health tracking. Monitor vitals, track workouts, and stay connected with a 7-day battery.",
+    "specs": ["7-day Battery", "ECG Monitor", "GPS", "Water Resistant", "AMOLED"],
+    "badge": "New",
+    "inStock": true,
+    "featured": true
+  },
+  {
+    "id": 3,
+    "name": "CyberLux Pro Laptop",
+    "category": "electronics",
+    "price": 1299.00,
+    "originalPrice": 1599.00,
+    "discount": 19,
+    "rating": 4.7,
+    "reviews": 532,
+    "image": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=400&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=400&q=80",
+      "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=400&q=80"
+    ],
+    "description": "Power meets elegance. The CyberLux Pro features a next-gen processor, OLED display, and an ultra-thin chassis built for professionals who demand the best.",
+    "specs": ["Intel i9", "32GB RAM", "1TB SSD", "OLED Display", "Thunderbolt 5"],
+    "badge": "Top Pick",
+    "inStock": true,
+    "featured": true
+  },
+  {
+    "id": 4,
+    "name": "AeroFlex Running Shoes",
+    "category": "fashion",
+    "price": 129.99,
+    "originalPrice": 179.99,
+    "discount": 28,
+    "rating": 4.6,
+    "reviews": 2187,
+    "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&q=80",
+      "https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=400&q=80"
+    ],
+    "description": "Run faster, feel lighter. AeroFlex uses carbon-fiber sole technology and breathable mesh to deliver unmatched performance whether on track or trail.",
+    "specs": ["Carbon Fiber Sole", "Breathable Mesh", "Size 6–13", "3 Colors", "Machine Washable"],
+    "badge": "Hot",
+    "inStock": true,
+    "featured": true
+  },
+  {
+    "id": 5,
+    "name": "HoloFrame AR Glasses",
+    "category": "electronics",
+    "price": 899.00,
+    "originalPrice": 1099.00,
+    "discount": 18,
+    "rating": 4.5,
+    "reviews": 321,
+    "image": "https://images.unsplash.com/photo-1574944985070-8f3ebc6b79d2?w=400&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1574944985070-8f3ebc6b79d2?w=400&q=80"
+    ],
+    "description": "Step into the future. HoloFrame AR Glasses project stunning 3D overlays onto the real world with 8-hour battery and voice command support.",
+    "specs": ["8hr Battery", "Voice Control", "120° FOV", "5G", "Lightweight 65g"],
+    "badge": "Limited",
+    "inStock": true,
+    "featured": false
+  },
+  {
+    "id": 6,
+    "name": "ThermaCore Jacket",
+    "category": "fashion",
+    "price": 199.99,
+    "originalPrice": 259.99,
+    "discount": 23,
+    "rating": 4.7,
+    "reviews": 894,
+    "image": "https://images.unsplash.com/photo-1544966503-7cc5ac882d5f?w=400&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1544966503-7cc5ac882d5f?w=400&q=80"
+    ],
+    "description": "Stay warm in style. ThermaCore uses self-heating nano-fiber technology that adjusts to your body temperature automatically.",
+    "specs": ["Self-Heating", "Waterproof", "Windproof", "USB-C Charge", "4 Colors"],
+    "badge": "New",
+    "inStock": true,
+    "featured": false
+  },
+  {
+    "id": 7,
+    "name": "ZenDesk Ergonomic Chair",
+    "category": "home",
+    "price": 449.00,
+    "originalPrice": 599.00,
+    "discount": 25,
+    "rating": 4.8,
+    "reviews": 1567,
+    "image": "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=400&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=400&q=80"
+    ],
+    "description": "Work smarter, not harder. ZenDesk Chair offers lumbar support, adjustable armrests, and breathable mesh back for ultimate comfort during long sessions.",
+    "specs": ["Lumbar Support", "Adjustable Height", "Mesh Back", "360° Swivel", "Max 150kg"],
+    "badge": "Best Seller",
+    "inStock": true,
+    "featured": false
+  },
+  {
+    "id": 8,
+    "name": "PlasmaBlend Smoothie Maker",
+    "category": "home",
+    "price": 89.99,
+    "originalPrice": 119.99,
+    "discount": 25,
+    "rating": 4.4,
+    "reviews": 743,
+    "image": "https://images.unsplash.com/photo-1570222094114-d054a817e56b?w=400&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1570222094114-d054a817e56b?w=400&q=80"
+    ],
+    "description": "Blend anything in seconds. PlasmaBlend features a 2000W motor, self-cleaning mode, and smart sensor technology for perfect results every time.",
+    "specs": ["2000W Motor", "Self-Clean", "Smart Sensor", "BPA-Free", "10 Speed"],
+    "badge": "",
+    "inStock": true,
+    "featured": false
+  },
+  {
+    "id": 9,
+    "name": "NovaScent Perfume Collection",
+    "category": "beauty",
+    "price": 159.00,
+    "originalPrice": 199.00,
+    "discount": 20,
+    "rating": 4.9,
+    "reviews": 2341,
+    "image": "https://images.unsplash.com/photo-1541643600914-78b084683702?w=400&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1541643600914-78b084683702?w=400&q=80"
+    ],
+    "description": "A collection of 3 signature futuristic fragrances blending rare botanicals with synthetic molecules for an otherworldly sensory experience.",
+    "specs": ["3 x 50ml", "Long-Lasting", "Vegan", "No Parabens", "Gift Box"],
+    "badge": "Hot",
+    "inStock": true,
+    "featured": true
+  },
+  {
+    "id": 10,
+    "name": "LunaGlow Skincare Set",
+    "category": "beauty",
+    "price": 219.00,
+    "originalPrice": 289.00,
+    "discount": 24,
+    "rating": 4.7,
+    "reviews": 1876,
+    "image": "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=400&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=400&q=80"
+    ],
+    "description": "Reveal your best skin. LunaGlow's 5-piece set uses biotech-engineered peptides and lunar mineral extracts for visible results in 14 days.",
+    "specs": ["5-Piece Set", "14-Day Results", "Vegan", "Dermatologist Tested", "All Skin Types"],
+    "badge": "Top Pick",
+    "inStock": true,
+    "featured": false
+  },
+  {
+    "id": 11,
+    "name": "TurboCharge Wireless Pad",
+    "category": "electronics",
+    "price": 59.99,
+    "originalPrice": 79.99,
+    "discount": 25,
+    "rating": 4.5,
+    "reviews": 987,
+    "image": "https://images.unsplash.com/photo-1609592806596-b23c6a5f6b64?w=400&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1609592806596-b23c6a5f6b64?w=400&q=80"
+    ],
+    "description": "Charge 3 devices simultaneously at blazing 65W total output. Ultra-thin design with smart detection prevents overheating.",
+    "specs": ["65W Total", "3 Devices", "Qi2", "LED Indicator", "10mm Thin"],
+    "badge": "",
+    "inStock": true,
+    "featured": false
+  },
+  {
+    "id": 12,
+    "name": "VortexPro Gaming Mouse",
+    "category": "electronics",
+    "price": 79.99,
+    "originalPrice": 109.99,
+    "discount": 27,
+    "rating": 4.8,
+    "reviews": 3421,
+    "image": "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=400&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=400&q=80"
+    ],
+    "description": "Dominate every match. VortexPro features 32,000 DPI optical sensor, 8 programmable buttons, RGB lighting, and ultra-light 65g frame.",
+    "specs": ["32000 DPI", "8 Buttons", "RGB", "65g", "2.4GHz Wireless"],
+    "badge": "Best Seller",
+    "inStock": true,
+    "featured": true
+  }
+]

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Product details — NovaCartX">
+  <title>Product Details — NovaCartX</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div id="loader">
+  <div class="loader-logo">Nova<span>Cart</span>X</div>
+  <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+</div>
+<div id="toast-container"></div>
+
+<nav class="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Nova<span>Cart</span>X</a>
+    <div class="nav-search">
+      <span class="nav-search-icon">🔍</span>
+      <input type="text" id="nav-search" placeholder="Search products, brands…">
+    </div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="nav-actions">
+      <button class="nav-btn" id="theme-toggle">🌙</button>
+      <a href="login.html" class="nav-btn">👤</a>
+      <a href="cart.html" class="nav-btn" style="position:relative;">🛒 <span class="nav-badge cart-badge">0</span></a>
+      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobile-menu">
+  <a href="index.html">🏠 Home</a>
+  <a href="products.html">🛍 Products</a>
+  <a href="cart.html">🛒 Cart</a>
+  <a href="login.html">👤 Account</a>
+</div>
+<button id="back-to-top">↑</button>
+
+<!-- Breadcrumb -->
+<div class="page-hero" style="padding:1.5rem 0;">
+  <div class="container">
+    <div class="page-breadcrumb">
+      <a href="index.html">Home</a> › <a href="products.html">Products</a> › <span id="detail-breadcrumb">Product</span>
+    </div>
+  </div>
+</div>
+
+<!-- Product Detail -->
+<main class="product-detail">
+  <div class="container">
+    <div id="product-detail-container">
+      <div class="product-detail-grid">
+        <!-- Gallery -->
+        <div class="product-gallery">
+          <div class="gallery-main">
+            <img id="gallery-main-img" src="" alt="Product image">
+          </div>
+          <div class="gallery-thumbs" id="gallery-thumbs"></div>
+        </div>
+
+        <!-- Info -->
+        <div class="product-detail-info">
+          <div id="detail-badge"></div>
+          <div class="detail-category" id="detail-category"></div>
+          <h1 class="detail-title" id="detail-title"></h1>
+
+          <div class="detail-rating" id="detail-rating"></div>
+
+          <div class="detail-price-row">
+            <span class="detail-price" id="detail-price"></span>
+            <span class="detail-original" id="detail-original"></span>
+            <span class="detail-discount-tag" id="detail-discount"></span>
+          </div>
+
+          <p class="detail-desc" id="detail-description"></p>
+
+          <div class="detail-specs">
+            <h4>Key Features</h4>
+            <div class="specs-list" id="detail-specs"></div>
+          </div>
+
+          <!-- Quantity + Actions -->
+          <div style="margin-top:1.5rem;">
+            <div style="font-size:0.82rem;font-weight:600;color:var(--text-muted);margin-bottom:0.5rem;">Quantity</div>
+            <div class="detail-actions">
+              <div class="qty-control">
+                <button class="qty-btn" id="qty-minus">−</button>
+                <span class="qty-val" id="qty-val">1</span>
+                <button class="qty-btn" id="qty-plus">+</button>
+              </div>
+              <button class="btn btn-primary btn-lg" id="detail-add-cart" style="flex:1;">🛒 Add to Cart</button>
+              <button class="btn btn-outline" id="detail-wishlist">🤍 Wishlist</button>
+            </div>
+          </div>
+
+          <!-- Guarantees -->
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:2rem;padding:1.5rem;background:var(--surface2);border:1.5px solid var(--border);border-radius:var(--radius);">
+            <div style="text-align:center;">
+              <div style="font-size:1.5rem;margin-bottom:0.3rem;">🚀</div>
+              <div style="font-size:0.78rem;font-weight:600;">Fast Delivery</div>
+              <div style="font-size:0.72rem;color:var(--text-muted);">2–5 business days</div>
+            </div>
+            <div style="text-align:center;">
+              <div style="font-size:1.5rem;margin-bottom:0.3rem;">🔄</div>
+              <div style="font-size:0.78rem;font-weight:600;">Free Returns</div>
+              <div style="font-size:0.72rem;color:var(--text-muted);">30-day policy</div>
+            </div>
+            <div style="text-align:center;">
+              <div style="font-size:1.5rem;margin-bottom:0.3rem;">🛡</div>
+              <div style="font-size:0.78rem;font-weight:600;">2-Year Warranty</div>
+              <div style="font-size:0.72rem;color:var(--text-muted);">Full coverage</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Related Products -->
+    <div style="margin-top:5rem;">
+      <div class="section-header scroll-reveal">
+        <span class="section-label">You May Also Like</span>
+        <h2 class="section-title">Related Products</h2>
+      </div>
+      <div class="products-grid" id="related-grid"></div>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">Nova<span>Cart</span>X</div>
+        <p class="footer-desc">The future of online shopping.</p>
+        <div class="footer-social">
+          <a href="#" class="social-btn">𝕏</a><a href="#" class="social-btn">📸</a><a href="#" class="social-btn">𝑓</a>
+        </div>
+      </div>
+      <div class="footer-col"><h4>Shop</h4><ul><li><a href="products.html">All Products</a></li></ul></div>
+      <div class="footer-col"><h4>Account</h4><ul><li><a href="login.html">Login</a></li><li><a href="cart.html">Cart</a></li></ul></div>
+      <div class="footer-col"><h4>Help</h4><ul><li><a href="contact.html">Contact</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>© 2025 NovaCartX.</span></div>
+  </div>
+</footer>
+
+<script src="js/app.js"></script>
+<script>
+  // Update breadcrumb title after product loads
+  document.addEventListener('DOMContentLoaded', () => {
+    const titleEl = document.getElementById('detail-title');
+    const breadEl = document.getElementById('detail-breadcrumb');
+    if (titleEl && breadEl) {
+      const observer = new MutationObserver(() => {
+        if (titleEl.textContent) breadEl.textContent = titleEl.textContent;
+      });
+      observer.observe(titleEl, { childList: true, subtree: true });
+    }
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="NovaCartX — The future of shopping. Discover futuristic tech, fashion, beauty, and home products with unbeatable deals.">
+  <meta name="keywords" content="NovaCartX, futuristic shopping, tech products, online store, best deals">
+  <title>NovaCartX — The Future of Shopping</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ── Loading Screen ── -->
+<div id="loader">
+  <div class="loader-logo">Nova<span>Cart</span>X</div>
+  <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+</div>
+
+<!-- ── Toast Container ── -->
+<div id="toast-container"></div>
+
+<!-- ── Navbar ── -->
+<nav class="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Nova<span>Cart</span>X</a>
+
+    <div class="nav-search">
+      <span class="nav-search-icon">🔍</span>
+      <input type="text" id="nav-search" placeholder="Search products, brands…">
+    </div>
+
+    <div class="nav-links">
+      <a href="index.html" class="active">Home</a>
+      <a href="products.html">Products</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <div class="nav-actions">
+      <button class="nav-btn" id="theme-toggle" title="Toggle theme">🌙</button>
+      <a href="login.html" class="nav-btn" title="Account">👤</a>
+      <a href="products.html?wishlist=1" class="nav-btn" title="Wishlist" style="position:relative;">
+        ❤️ <span class="nav-badge wishlist-badge">0</span>
+      </a>
+      <a href="cart.html" class="nav-btn" title="Cart" style="position:relative;">
+        🛒 <span class="nav-badge cart-badge">0</span>
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- ── Mobile Menu ── -->
+<div class="mobile-menu" id="mobile-menu">
+  <div class="nav-search" style="max-width:100%;">
+    <span class="nav-search-icon">🔍</span>
+    <input type="text" id="nav-search-mobile" placeholder="Search…" style="padding-left:2.8rem;">
+  </div>
+  <a href="index.html">🏠 Home</a>
+  <a href="products.html">🛍 Products</a>
+  <a href="cart.html">🛒 Cart</a>
+  <a href="login.html">👤 Account</a>
+  <a href="about.html">ℹ️ About</a>
+  <a href="contact.html">📬 Contact</a>
+</div>
+
+<!-- ── Quick View Modal ── -->
+<div class="modal-overlay" id="quick-view-modal">
+  <div class="modal">
+    <button class="modal-close" data-modal="quick-view-modal">✕</button>
+    <div class="modal-content"></div>
+  </div>
+</div>
+
+<!-- ── Back to Top ── -->
+<button id="back-to-top" title="Back to top">↑</button>
+
+<!-- ═══════════════════════════════════════════
+     HERO SECTION
+════════════════════════════════════════════ -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-content">
+    <!-- Left: Copy -->
+    <div class="hero-text">
+      <div class="hero-badge">
+        <span class="hero-badge-dot"></span>
+        Now shipping to 120+ countries
+      </div>
+      <h1 class="hero-title">
+        Shop the<br>
+        <span class="accent">Future,</span><br>
+        <span class="stroke">Today.</span>
+      </h1>
+      <p class="hero-sub">
+        NovaCartX brings you tomorrow's technology, fashion, and lifestyle — curated, affordable, and delivered at warp speed.
+      </p>
+      <div class="hero-actions">
+        <a href="products.html" class="btn btn-primary btn-lg">🚀 Shop Now</a>
+        <a href="about.html"   class="btn btn-outline btn-lg">Learn More</a>
+      </div>
+      <div class="hero-stats">
+        <div>
+          <div class="hero-stat-num">120K+</div>
+          <div class="hero-stat-label">Happy Customers</div>
+        </div>
+        <div>
+          <div class="hero-stat-num">4,800+</div>
+          <div class="hero-stat-label">Products</div>
+        </div>
+        <div>
+          <div class="hero-stat-num">99.2%</div>
+          <div class="hero-stat-label">Satisfaction Rate</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right: Featured product cards -->
+    <div class="hero-visual scroll-reveal">
+      <div class="hero-card hero-card-main">
+        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600&q=80" alt="Hero product">
+        <div class="hero-card-info">
+          <div class="hero-card-name">QuantumPulse X1 Headphones</div>
+          <div class="hero-card-price">$299.99 <span style="text-decoration:line-through;opacity:0.5;font-size:0.85rem;">$399.99</span></div>
+        </div>
+      </div>
+      <div class="hero-card">
+        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=300&q=80" alt="Watch">
+        <div class="hero-card-info">
+          <div class="hero-card-name">NovaSkin SmartWatch</div>
+          <div class="hero-card-price">$549.00</div>
+        </div>
+      </div>
+      <div class="hero-card">
+        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=300&q=80" alt="Shoes">
+        <div class="hero-card-info">
+          <div class="hero-card-name">AeroFlex Running Shoes</div>
+          <div class="hero-card-price">$129.99</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     CATEGORIES SECTION
+════════════════════════════════════════════ -->
+<section class="categories-section">
+  <div class="container">
+    <div class="section-header scroll-reveal">
+      <span class="section-label">Browse by Category</span>
+      <h2 class="section-title">What Are You Looking For?</h2>
+      <p class="section-sub">Explore our curated collections across every category.</p>
+    </div>
+    <div class="categories-grid">
+      <a href="products.html?cat=electronics" class="category-card scroll-reveal scroll-reveal-delay-1">
+        <div class="category-icon">⚡</div>
+        <div class="category-name">Electronics</div>
+        <div class="category-count">6 products</div>
+      </a>
+      <a href="products.html?cat=fashion" class="category-card scroll-reveal scroll-reveal-delay-2">
+        <div class="category-icon">👗</div>
+        <div class="category-name">Fashion</div>
+        <div class="category-count">2 products</div>
+      </a>
+      <a href="products.html?cat=home" class="category-card scroll-reveal scroll-reveal-delay-3">
+        <div class="category-icon">🏠</div>
+        <div class="category-name">Home & Living</div>
+        <div class="category-count">2 products</div>
+      </a>
+      <a href="products.html?cat=beauty" class="category-card scroll-reveal scroll-reveal-delay-4">
+        <div class="category-icon">✨</div>
+        <div class="category-name">Beauty</div>
+        <div class="category-count">2 products</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     FEATURED PRODUCTS
+════════════════════════════════════════════ -->
+<section class="products-section" id="featured-products">
+  <div class="container">
+    <div class="section-header scroll-reveal">
+      <span class="section-label">Handpicked for You</span>
+      <h2 class="section-title">Featured Products</h2>
+      <p class="section-sub">The best of the best, selected by our experts.</p>
+    </div>
+    <div class="products-grid" id="featured-grid"></div>
+    <!-- JS renders cards into #featured-grid -->
+    <div id="featured-products" style="display:none;"></div>
+    <div style="text-align:center;margin-top:3rem;" class="scroll-reveal">
+      <a href="products.html" class="btn btn-outline btn-lg">View All Products →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     OFFERS BANNER
+════════════════════════════════════════════ -->
+<section class="offer-section">
+  <div class="container">
+    <div class="offer-banner scroll-reveal">
+      <div>
+        <div class="offer-tag">⚡ Flash Deal</div>
+        <h2 class="offer-title">Up to 30% Off<br>All Electronics</h2>
+        <p class="offer-sub">Limited time offer. Don't miss out on these futuristic deals.</p>
+        <a href="products.html?cat=electronics" class="btn btn-primary btn-lg">Shop Electronics</a>
+      </div>
+      <div>
+        <div class="offer-countdown">
+          <div class="countdown-block">
+            <div class="countdown-num" id="countdown-days">02</div>
+            <div class="countdown-label">Days</div>
+          </div>
+          <div class="countdown-block">
+            <div class="countdown-num" id="countdown-hours">14</div>
+            <div class="countdown-label">Hrs</div>
+          </div>
+          <div class="countdown-block">
+            <div class="countdown-num" id="countdown-mins">33</div>
+            <div class="countdown-label">Min</div>
+          </div>
+          <div class="countdown-block">
+            <div class="countdown-num" id="countdown-secs">22</div>
+            <div class="countdown-label">Sec</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     REVIEWS
+════════════════════════════════════════════ -->
+<section class="reviews-section">
+  <div class="container">
+    <div class="section-header scroll-reveal">
+      <span class="section-label">What Customers Say</span>
+      <h2 class="section-title">Loved by 120,000+ Shoppers</h2>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card scroll-reveal scroll-reveal-delay-1">
+        <div class="review-header">
+          <div class="review-avatar">AK</div>
+          <div>
+            <div class="review-name">Aryan Kapoor</div>
+            <div class="review-date">May 2025</div>
+          </div>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"NovaCartX is legitimately the best shopping experience I've had online. The QuantumPulse headphones arrived in 2 days and sound incredible. 10/10 would recommend."</p>
+      </div>
+      <div class="review-card scroll-reveal scroll-reveal-delay-2">
+        <div class="review-header">
+          <div class="review-avatar">SR</div>
+          <div>
+            <div class="review-name">Sofia Reyes</div>
+            <div class="review-date">April 2025</div>
+          </div>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"I love this website! The dark mode, fast delivery, and the product quality is insane. The NovaScent perfume collection is my absolute favourite."</p>
+      </div>
+      <div class="review-card scroll-reveal scroll-reveal-delay-3">
+        <div class="review-header">
+          <div class="review-avatar">JL</div>
+          <div>
+            <div class="review-name">James Liu</div>
+            <div class="review-date">March 2025</div>
+          </div>
+        </div>
+        <div class="review-stars">★★★★☆</div>
+        <p class="review-text">"Super smooth checkout process and the cart works perfectly across devices. Bought a gaming mouse and a smartwatch — both exceeded expectations. Will shop again!"</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     NEWSLETTER
+════════════════════════════════════════════ -->
+<section class="newsletter-section">
+  <div class="container">
+    <div class="newsletter-card scroll-reveal">
+      <div class="newsletter-icon">📡</div>
+      <h3 class="newsletter-title">Stay Ahead of the Future</h3>
+      <p class="newsletter-sub">Subscribe for exclusive deals, new arrivals, and futuristic finds — delivered to your inbox.</p>
+      <form class="newsletter-form" id="newsletter-form-home">
+        <input class="newsletter-input" type="email" placeholder="Enter your email address…" required>
+        <button class="btn btn-primary" type="submit">Subscribe</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════════ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">Nova<span>Cart</span>X</div>
+        <p class="footer-desc">The future of online shopping. Curated futuristic products delivered to your door with unmatched speed and quality.</p>
+        <div class="footer-social">
+          <a href="#" class="social-btn" title="Twitter/X">𝕏</a>
+          <a href="#" class="social-btn" title="Instagram">📸</a>
+          <a href="#" class="social-btn" title="Facebook">𝑓</a>
+          <a href="#" class="social-btn" title="YouTube">▶</a>
+          <a href="#" class="social-btn" title="LinkedIn">in</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="products.html">All Products</a></li>
+          <li><a href="products.html?cat=electronics">Electronics</a></li>
+          <li><a href="products.html?cat=fashion">Fashion</a></li>
+          <li><a href="products.html?cat=home">Home & Living</a></li>
+          <li><a href="products.html?cat=beauty">Beauty</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Account</h4>
+        <ul>
+          <li><a href="login.html">Login / Register</a></li>
+          <li><a href="cart.html">My Cart</a></li>
+          <li><a href="#">My Orders</a></li>
+          <li><a href="#">Wishlist</a></li>
+          <li><a href="#">Profile Settings</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Help</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Returns Policy</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 NovaCartX. All rights reserved.</span>
+      <span>Made with ⚡ for the future</span>
+    </div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+<!-- Override the featured products grid (app.js targets #featured-grid) -->
+<script>
+  // Point initHomePage to the right grid element
+  document.addEventListener('DOMContentLoaded', async () => {
+    const grid = document.getElementById('featured-grid');
+    if (!grid) return;
+    const products = await fetchProducts();
+    products.filter(p => p.featured).forEach((p, i) => {
+      const card = createProductCard(p);
+      card.classList.add(`scroll-reveal-delay-${(i % 4) + 1}`);
+      grid.appendChild(card);
+    });
+    initScrollReveal();
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,170 @@
+/* ============================================================
+   NovaCartX — Main Stylesheet
+   A futuristic e-commerce experience
+   ============================================================ */
+
+/* ── Google Fonts ── */
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap');
+
+/* ── CSS Variables (Light Theme) ── */
+:root {
+  --bg:           #f4f3f0;
+  --bg-alt:       #eae9e4;
+  --surface:      #ffffff;
+  --surface2:     #f8f7f4;
+  --border:       #e0deda;
+  --text:         #0d0c0a;
+  --text-muted:   #6b6860;
+  --text-light:   #9c9a96;
+
+  --accent:       #ff5c1a;
+  --accent-hover: #e04a10;
+  --accent-glow:  rgba(255,92,26,0.18);
+  --accent2:      #1a1aff;
+  --accent2-glow: rgba(26,26,255,0.12);
+
+  --nav-bg:       rgba(244,243,240,0.92);
+  --card-shadow:  0 2px 16px rgba(0,0,0,0.07);
+  --card-hover:   0 8px 40px rgba(0,0,0,0.13);
+
+  --radius:       14px;
+  --radius-lg:    22px;
+  --radius-sm:    8px;
+
+  --font-head:    'Syne', sans-serif;
+  --font-body:    'DM Sans', sans-serif;
+
+  --transition:   0.28s cubic-bezier(0.4,0,0.2,1);
+}
+
+/* ── Dark Theme ── */
+[data-theme="dark"] {
+  --bg:           #0a0a0f;
+  --bg-alt:       #111118;
+  --surface:      #15151e;
+  --surface2:     #1c1c28;
+  --border:       #2a2a38;
+  --text:         #f0efe8;
+  --text-muted:   #9897a0;
+  --text-light:   #5c5b66;
+
+  --accent:       #ff6830;
+  --accent-hover: #ff7a48;
+  --accent-glow:  rgba(255,104,48,0.22);
+  --accent2:      #5555ff;
+  --accent2-glow: rgba(85,85,255,0.18);
+
+  --nav-bg:       rgba(10,10,15,0.94);
+  --card-shadow:  0 2px 20px rgba(0,0,0,0.35);
+  --card-hover:   0 8px 50px rgba(0,0,0,0.5);
+}
+
+/* ── Reset & Base ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; font-size: 16px; }
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  transition: background var(--transition), color var(--transition);
+  overflow-x: hidden;
+}
+
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+img { max-width: 100%; display: block; }
+button { cursor: pointer; border: none; background: none; font-family: var(--font-body); }
+input, textarea, select { font-family: var(--font-body); }
+
+/* ── Loading Screen ── */
+#loader {
+  position: fixed; inset: 0;
+  background: var(--bg);
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  z-index: 9999;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+#loader.hidden { opacity: 0; visibility: hidden; }
+
+.loader-logo {
+  font-family: var(--font-head);
+  font-size: 2.2rem;
+  font-weight: 800;
+  letter-spacing: -1px;
+  margin-bottom: 2rem;
+}
+.loader-logo span { color: var(--accent); }
+
+.loader-bar {
+  width: 200px; height: 3px;
+  background: var(--border);
+  border-radius: 99px;
+  overflow: hidden;
+}
+.loader-bar-fill {
+  height: 100%;
+  background: var(--accent);
+  border-radius: 99px;
+  animation: loaderFill 1.6s cubic-bezier(0.4,0,0.2,1) forwards;
+}
+@keyframes loaderFill {
+  from { width: 0; }
+  to   { width: 100%; }
+}
+
+/* ── Toast Notifications ── */
+#toast-container {
+  position: fixed;
+  bottom: 2rem; right: 2rem;
+  z-index: 8000;
+  display: flex; flex-direction: column; gap: 0.6rem;
+}
+
+.toast {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--accent);
+  color: var(--text);
+  padding: 0.85rem 1.2rem;
+  border-radius: var(--radius-sm);
+  box-shadow: var(--card-shadow);
+  display: flex; align-items: center; gap: 0.75rem;
+  min-width: 260px; max-width: 340px;
+  font-size: 0.9rem;
+  animation: toastIn 0.35s ease forwards;
+  pointer-events: auto;
+}
+.toast.success { border-left-color: #22c55e; }
+.toast.error   { border-left-color: #ef4444; }
+.toast.info    { border-left-color: var(--accent2); }
+.toast-icon { font-size: 1.1rem; flex-shrink: 0; }
+.toast-text { flex: 1; font-weight: 500; }
+.toast-close { opacity: 0.5; font-size: 1rem; padding: 0 0.25rem; transition: opacity 0.2s; }
+.toast-close:hover { opacity: 1; }
+.toast.removing { animation: toastOut 0.3s ease forwards; }
+@keyframes toastIn  { from { transform: translateX(110%); opacity: 0; } to { transform: none; opacity: 1; } }
+@keyframes toastOut { from { transform: none; opacity: 1; } to { transform: translateX(110%); opacity: 0; } }
+
+/* ── Navigation ── */
+.navbar {
+  position: sticky; top: 0; z-index: 1000;
+  background: var(--nav-bg);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border-bottom: 1px solid var(--border);
+  transition: background var(--transition);
+}
+
+.nav-inner {
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  height: 68px;
+  display: flex; align-items: center; gap: 2rem;
+}
+
+/* (rest of stylesheet omitted here for brevity) */

@@ -668,7 +668,7 @@ function initAuthPage() {
       setTimeout(() => { showToast('Account created! Welcome to NovaCartX 🚀', 'success'); }, 1400);
     });
   }
-
+}
   
 
 

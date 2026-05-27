@@ -1,0 +1,24 @@
+{
+  "name": "novacartx",
+  "version": "1.0.0",
+  "description": "A futuristic e-commerce web application",
+  "main": "index.html",
+  "scripts": {
+    "start": "http-server -c-1 -p 5000",
+    "dev": "http-server -c-1 -p 5000",
+    "docker:build": "docker build -t novacartx:latest .",
+    "docker:run": "docker-compose up --build",
+    "docker:stop": "docker-compose down"
+  },
+  "keywords": [
+    "ecommerce",
+    "shopping",
+    "futuristic",
+    "web-app"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}

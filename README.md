@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # NovaCartX — The Future of Shopping 🚀
 
 A futuristic e-commerce web application with dark mode, cart management, wishlist, and product filtering.
@@ -196,3 +197,6 @@ NovaCartX © 2025 | Built with ⚡ for the future
 ---
 
 **Need help?** Check the code comments or open an issue on GitHub!
+=======
+# NovacartX
+>>>>>>> 5ce7959032d9fb8bda2f1308572cb878b5815252
